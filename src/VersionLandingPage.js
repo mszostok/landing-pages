@@ -20,11 +20,12 @@ import PlayIcon from "./images/play-icon.svg";
 const SectionHeading = tw(HeadingBase)`text-secondary-900 mt-64`;
 const Code = tw.code`text-black`
 const FeatureHighlight = tw.span`text-primary-500`
-const LinkGH = tw.a`
+const LinkButton = tw.a`
   text-primary-300
   font-semibold tracking-wide transition duration-300
   pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
 `;
+
 const Root = tw(Container)`bg-brand -mx-8 -mt-8 pt-8 px-8`
 
 function VersionLandingPage() {
@@ -43,7 +44,7 @@ function VersionLandingPage() {
 					description={(
 						<>
 							Go package to present your CLI version in <b>a classy way</b>. Born to <strong>remove the
-							repetitiveness</strong> of reimplementing version command.
+							repetitiveness</strong> in implementing the version command.
 							<br/>
 							<br/>
 							All magic included.
@@ -59,7 +60,7 @@ function VersionLandingPage() {
 					{
 						imageSrc: CompassIcon, title: "Data Autodiscovery", description: (
 							<>
-								For Go 1.18+, detect <Code>version, commit, commitDate</Code>,
+								For Go 1.18+, detect <Code>version</Code>, <Code>commit</Code>, <Code>commitDate</Code>,
 								and <Code>dirtyBuild</Code> automatically.
 							</>
 						)
@@ -68,23 +69,25 @@ function VersionLandingPage() {
 					{
 						imageSrc: ChatIcon, title: "Multiple Output Formats", description: (
 							<>
-								Print the version in the <Code>YAML, JSON, short</Code>, and <Code>pretty</Code> formats.
+								Print the version in the <Code>YAML</Code>, <Code>JSON</Code>, <Code>short</Code>, and <Code>pretty</Code> formats.
 							</>
 						),
 					},
 					{
 						imageSrc: GitHubLineIcon, title: "New Release Discovery", description: (
 							<>
-								Detect and display an upgrade notice if a newer version has been released. This can also be used as a
-								<LinkGH><a href={"/get-started/upgrade-notice/"}>standalone</a></LinkGH> component for your existing
-								project.
+								Detect and display an upgrade notice if a newer version of your project has been released.
 							</>
 						)
 					},
 					{
 						imageSrc: ModulesIcon,
 						title: "Modularity",
-						description: "Designed in a way that lets you use each component individually. For example, use the notice upgrade component, or the version collector logic, or a printer with its own info object."
+						description: (
+							<>
+							Designed in a way that lets you use each component individually. For example, use the <LinkButton href={"get-started/upgrade-notice/"}>notice upgrade</LinkButton> component, or the <LinkButton href={"get-started/usage/plain/"}>version collector</LinkButton> logic, or a <LinkButton href={"get-started/usage/printer/"}>printer</LinkButton> with your own info object.
+							</>
+						)
 					},
 					{
 						imageSrc: PlayIcon,
@@ -99,10 +102,8 @@ function VersionLandingPage() {
 					{
 						imageSrc: CustomizeIcon, title: "...with Full Customization", description: (
 							<>
-								However you can customize the default behavior of the version components. For example,
-								use <Code>printer.WithLayout</Code>, <Code>printer.WithPostRender</Code>, <Code>upgrade.WithUpdateCheckTimeout</Code>,
-								and many, many <LinkGH><a
-								href={"/customization"}>others</a></LinkGH>.
+								However you can customize the default behavior of the version components via <Code>printer.WithLayout</Code>, <Code>printer.WithPostRender</Code>, <Code>upgrade.WithUpdateCheckTimeout</Code>,
+								and many <LinkButton href={"customization"}>others</LinkButton>.
 							</>
 						)
 					},
@@ -148,8 +149,7 @@ function VersionLandingPage() {
 							<FeatureHighlight>Cobra</FeatureHighlight> native support
 						</>)}
 						description={(<>
-							There is built-in support for <LinkGH><a
-							href={"https://github.com/spf13/cobra"}>https://github.com/spf13/cobra</a></LinkGH>.
+							There is built-in support for <LinkButton href={"https://github.com/spf13/cobra"}>https://github.com/spf13/cobra</LinkButton>.
 						</>)}
 						primaryButtonUrl={"quick-start/"}
 					/>
