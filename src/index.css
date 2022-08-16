@@ -1,13 +1,146 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Below animations are fore modal created using React-Modal */
+.ReactModal__Overlay {
+	transition: transform 300ms ease-in-out;
+	transition-delay: 100ms;
+	transform: scale(0);
+	/* transform: translateY(-150%); */
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.375 !important;
+}
+.ReactModal__Overlay--after-open {
+	transform: scale(1);
+	/* transform: translateY(0%); */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.ReactModal__Overlay--before-close {
+	transform: scale(0);
+	/* transform: translateY(-150%); */
 }
+
+#cf {
+	position: relative;
+	height: 281px;
+	width: 450px;
+	margin: 0 auto;
+}
+
+#cf img {
+	position: absolute;
+	left: 0;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+}
+
+
+@keyframes cf3FadeInOut {
+	0% {
+		opacity: 1;
+	}
+	45% {
+		opacity: 1;
+	}
+	55% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+#cf3 img.top {
+	animation-name: cf3FadeInOut;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 1s;
+	animation-direction: alternate;
+}
+
+.announcement-bar-container {
+	/*background-color: rgb(246, 230, 217);*/
+	background-color: #f3dcca;
+	color: #16253b;
+	align-items: center;
+	justify-content: space-between;
+	/*padding: 0.1rem 1.5rem;*/
+	margin: 0 14rem 2rem;
+	z-index: 9999999;
+	border-radius: 4px;
+	box-shadow: 1px 1px 25px 3px rgba(149, 136, 124, 0.72);
+}
+
+.announcement-bar-container a {
+	color: #000;
+	text-decoration: none;
+	line-height: 30px;
+}
+
+.wrapper {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.wrapper > * {
+	flex: 1 100%;
+}
+
+.main {
+	color: rgba(22, 37, 59, 0.87);
+	text-align: left;
+}
+
+.aside-2 {
+	color: rgba(22, 37, 59, 0.67);
+	text-align: right;
+	padding-right: 10px;
+	padding-top: 2px;
+}
+
+@media all and (min-width: 600px) {
+	.aside {
+		flex: 1 0 0;
+	}
+}
+
+@media all and (min-width: 800px) {
+	.main {
+		flex: 5 0px;
+	}
+
+	.aside-1 {
+		order: 1;
+	}
+
+	.main {
+		order: 2;
+	}
+
+	.aside-2 {
+		order: 5;
+	}
+}
+
+.quote {
+	margin-top: 1.25em;
+}
+
+.quote blockquote {
+	border-left: 2px;
+	border-color: #444;
+	border-style: solid;
+	/* text-align: center; */
+	padding: 12px;
+	/* font-weight: 700; */
+	/*font-size: 1.2rem;*/
+}
+
