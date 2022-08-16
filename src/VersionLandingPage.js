@@ -40,14 +40,15 @@ function VersionLandingPage() {
 
 				<Hero
 					heading={"Pure DNA of your CLI"}
-					description={(<>
-						Go package to present your CLI version in <b>a classy way</b>. Born to <strong>remove the
-						repetitiveness</strong> of reimplementing version command.
-
-						<div className={"quote"}>
+					description={(
+						<>
+							Go package to present your CLI version in <b>a classy way</b>. Born to <strong>remove the
+							repetitiveness</strong> of reimplementing version command.
+							<br/>
+							<br/>
 							All magic included.
-						</div>
-					</>)}
+						</>
+					)}
 					primaryButtonUrl={"quick-start/"}
 					secondaryButtonUrl={"https://github.com/mszostok/version"}
 					imageSrc={"https://version.szostok.io/assets/preview.gif"}

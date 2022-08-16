@@ -1,6 +1,7 @@
 {
   "name": "landingpages",
   "version": "0.1.0",
+	"homepage": "./",
   "private": true,
   "dependencies": {
     "@owaiswiz/use-in-view": "^1.0.16",
