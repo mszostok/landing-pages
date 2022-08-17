@@ -8,7 +8,6 @@ import Navbar from "./components/Navbar";
 import MiniCenteredFooter from "./components/MiniCenteredFooter";
 import FeatureWithImage from "./components/features/FeatureWithImage";
 import FunctionalityCards from "./components/features/FeaturesCards";
-import LeftAnimation from "./components/helpers/LeftAnimation";
 
 import CompassIcon from "./images/compass-icon.svg";
 import ChatIcon from "./images/chat-icon.svg";
@@ -69,7 +68,7 @@ function VersionLandingPage() {
 					{
 						imageSrc: ChatIcon, title: "Multiple Output Formats", description: (
 							<>
-								Print the version in the <Code>YAML</Code>, <Code>JSON</Code>, <Code>short</Code>, and <Code>pretty</Code> formats.
+								Print the version in the <Code>YAML</Code>, <Code>JSON</Code>, <Code>short</Code>, and <Code>pretty</Code> formats. Automatically disable color output for non-tty output streams.
 							</>
 						),
 					},
@@ -109,8 +108,7 @@ function VersionLandingPage() {
 					},
 
 				]}/>
-
-				<LeftAnimation>
+					<br /><br /><br /><br /><br /><br />
 					<FeatureWithImage
 						images={["https://szostok.io/projects/version/assets/examples/screen-cobra-version.png/", "https://szostok.io/projects/version/assets/examples/screen-custom-layout-.png/", "https://szostok.io/projects/version/assets/examples/screen-custom-formatting-.png/",]}
 						heading={(<>
@@ -165,7 +163,6 @@ function VersionLandingPage() {
 						</>)}
 						primaryButtonUrl={"customization/upgrade-notice/"}
 					/>
-				</LeftAnimation>
 				<MiniCenteredFooter/>
 			</Content2Xl>
 		</Root>);
