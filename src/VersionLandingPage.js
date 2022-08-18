@@ -51,7 +51,7 @@ function VersionLandingPage() {
 					)}
 					primaryButtonUrl={"quick-start/"}
 					secondaryButtonUrl={"https://github.com/mszostok/version"}
-					imageSrc={"https://version.szostok.io/assets/preview.gif"}
+					imageSrc={"https://szostok.io/projects/version/assets/hp-preview.gif"}
 				/>
 
 				<SectionHeading>Functionality</SectionHeading>

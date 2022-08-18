@@ -84,7 +84,7 @@ module.exports = {
 					900: '#16253b',
 				},
 
-				brand: '#f3dcca',
+				brand: '#fdf0e5',
 				gray: {
 					"lightest": "#fff",
 					100: '#f7fafc',
