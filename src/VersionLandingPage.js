@@ -163,6 +163,18 @@ function VersionLandingPage() {
 						</>)}
 						primaryButtonUrl={"customization/upgrade-notice/"}
 					/>
+				<FeatureWithImage
+					images={["https://szostok.io/projects/version/assets/examples/screen-custom-fields-.png"]}
+					heading={(<>
+						<FeatureHighlight>Custom</FeatureHighlight> info fields
+					</>)}
+					description={(<>
+						Extend the version info with own fields just by assigning your Go struct.
+						<br/>
+						You can define the field name for all output formats with field tags.
+					</>)}
+					primaryButtonUrl={"customization/extra-fields/"}
+				/>
 				<MiniCenteredFooter/>
 			</Content2Xl>
 		</Root>);
