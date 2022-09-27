@@ -37,7 +37,6 @@ function VersionLandingPage() {
 					documentationUrl={"quick-start/"}
 					gitHubUrl={"https://github.com/mszostok/version"}
 				/>
-
 				<Hero
 					heading={"Pure DNA of your CLI"}
 					description={(
@@ -53,6 +52,16 @@ function VersionLandingPage() {
 					secondaryButtonUrl={"https://github.com/mszostok/version"}
 					imageSrc={"https://szostok.io/projects/version/assets/hp-preview.gif"}
 				/>
+
+				<div className={"announcement-bar-container"} >
+					<div className="wrapper">
+						<div className="main">
+							🧐 Curious why? Check out the <LinkButton href={"https://dev.to/mszostok/cli-version-a-collection-of-handy-tips-1nce"}>CLI version. A collection of handy tips</LinkButton> blog post!
+						</div>
+						<aside className="aside aside-1"></aside>
+						<aside className="aside aside-2"></aside>
+					</div>
+				</div>
 
 				<SectionHeading>Functionality</SectionHeading>
 				<FunctionalityCards cards={[

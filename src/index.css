@@ -16,3 +16,53 @@ h5 {
 body {
 	font-family: "Inter", sans-serif;
 }
+
+.announcement-bar-container {
+	color: #16253b;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 14rem 2rem;
+	border-radius: 4px;
+	box-shadow: 1px 1px 25px 3px rgba(149, 136, 124, 0.72);
+	line-height: 30px;
+}
+
+.wrapper {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.wrapper > * {
+	flex: 1 100%;
+}
+
+.aside-2 {
+	color: rgba(22, 37, 59, 0.67);
+	text-align: right;
+	padding-right: 10px;
+	padding-top: 2px;
+}
+
+@media all and (min-width: 600px) {
+	.aside {
+		flex: 1 0 0;
+	}
+}
+
+@media all and (min-width: 800px) {
+	.main {
+		flex: 5 0px;
+	}
+
+	.aside-1 {
+		order: 1;
+	}
+
+	.main {
+		order: 2;
+	}
+
+	.aside-2 {
+		order: 5;
+	}
+}
