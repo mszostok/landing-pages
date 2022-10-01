@@ -25,8 +25,12 @@ const DesktopNavLinks = tw.nav`
 `;
 
 const LogoButton = tw.button`
-
-font-bold lg:pl-6 lg:pr-3 px-3 py-1 rounded-lg bg-primary-500 border-primary-500 border-2 text-gray-100 hocus:bg-primary-700 focus:shadow-outline focus:outline-none transition duration-300
+-my-2 -ml-5
+py-2  text-2xl!
+rounded-md text-gray-100
+font-black border-b-0 text-2xl!
+bg-brand border-white  border-0 text-secondary-100 hover:bg-gray-400 hover:text-gray-800
+hover:bg-gray-200  focus:outline-none transition duration-300
 `;
 
 const Icon = styled.img`
@@ -37,14 +41,14 @@ filter: invert(29%) sepia(0%) saturate(21%) hue-rotate(254deg) brightness(91%) c
 `
 
 const ActiveButton = tw.button`
-font-light px-3 py-2 rounded-md bg-primary-500 border-primary-500 border-0 text-gray-100 hocus:bg-primary-700 focus:shadow-outline focus:outline-none transition duration-300
+font-light px-3 py-2 rounded-md bg-primary-500 border-primary-500 border-0 text-gray-100 hocus:bg-primary-700 focus:outline-none transition duration-300
 `;
 
 const SecondaryButton = tw.button`
 font-light px-3 py-2
 rounded-md bg-gray-200 text-gray-100
 bg-gray-200 border-white  border-0 text-secondary-100 hover:bg-gray-400 hover:text-gray-800
-hover:bg-primary-700 hover:text-white focus:shadow-outline focus:outline-none transition duration-300`;
+hover:bg-primary-700 hover:text-white focus:outline-none transition duration-300`;
 
 function Navbar({
 									header = "",
@@ -63,19 +67,33 @@ function Navbar({
 	const [showModal, setShowModal] = React.useState(false);
 
 	return (
-		<Header className={"header-light"}>
+		<Header className={"header-light "}>
 			<DesktopNavLinks>
 				<LogoButton onClick={() => setShowModal(true)}>
-					<div className="grid grid-rows-1  grid-flow-col gap-4">
+					<div className="grid grid-rows-1 px-3 grid-flow-col gap-4">
 						<div className="row-span-1">
 							<code>{header}</code>
 						</div>
-						<div style={{borderLeft: "1px solid white", height: "100%"}}/>
-						<div className="col-span-2">
-							<Icon style={{width: "90%", marginLeft: "-4px", paddingTop: "4px"}} src={BoxesIcon} alt={"github"}/>
+								<div className="border-l border-gray-900 -ml-1 "/>
+						<div className="col-span-2 text-bold font-bold -ml-2 mt-[0.1em]">
+							<IconSecondary style={{height: "31px", paddingTop: "0px"}} src={BoxesIcon} alt={"github"}/>
 						</div>
 					</div>
 				</LogoButton>
+
+
+				{/*<LogoButton onClick={() => setShowModal(true)}>*/}
+				{/*	<div className="grid grid-rows-1 px-3   grid-flow-col gap-4">*/}
+
+				{/*		<div className="col-span-2 text-bold font-bold -ml-8 mt-[0.1em]">*/}
+				{/*			<IconSecondary style={{height: "31px", paddingTop: "0px"}} src={BoxesIcon} alt={"github"}/>*/}
+				{/*		</div>*/}
+				{/*		<div className="border-l border-gray-900 -ml-6 "/>*/}
+				{/*		<div className="row-span-1 -ml-8">*/}
+				{/*			<code>{header}</code>*/}
+				{/*		</div>*/}
+				{/*	</div>*/}
+				{/*</LogoButton>*/}
 				{links}
 				{showModal ? (
 					<>

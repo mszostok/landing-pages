@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-import LinkedinIcon from "../../images/linkedin-icon.svg";
 import {Icon} from "../helpers/Icon";
 
 const Container = tw.div`relative`;
