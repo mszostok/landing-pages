@@ -17,6 +17,18 @@ body {
 	font-family: "Inter", sans-serif;
 }
 
+.new-announcement-bar-container {
+	color: #16253b;
+	background: rgba(194, 170, 170, 0.5);
+	padding: 0 !important;
+	line-height: 26px;
+	text-align: center;
+
+	margin-left: -33.33%;
+	margin-right: -33.33%;
+}
+
+
 .announcement-bar-container {
 	color: #16253b;
 	align-items: center;

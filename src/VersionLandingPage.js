@@ -25,13 +25,19 @@ const LinkButton = tw.a`
   pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
 `;
 
-const Root = tw(Container)`bg-brand -mx-8 -mt-8 pt-8 px-8`
+const Root = tw(Container)`bg-brand -mt-8 pt-8 px-8`
 
 function VersionLandingPage() {
 	return (
 		<Root>
+			{/*<a href="https://dev.to/mszostok/cli-version-a-collection-of-handy-tips-1nce">*/}
+			{/*	<div className="new-announcement-bar-container">*/}
+			{/*		<div className="main font-medium  text-sm text-secondary-700 pt-1">*/}
+			{/*			🧐 Want to learn more? Check out the new "CLI version. A collection of handy tips" blog post.*/}
+			{/*		</div>*/}
+			{/*	</div>*/}
+			{/*</a>*/}
 			<Content2Xl>
-				<br/>
 				<Navbar
 					header={"szostok.io/version"}
 					documentationUrl={"quick-start/"}
@@ -56,7 +62,7 @@ function VersionLandingPage() {
 				<div className={"announcement-bar-container"} >
 					<div className="wrapper">
 						<div className="main">
-							🧐 Curious why? Check out the <LinkButton href={"https://dev.to/mszostok/cli-version-a-collection-of-handy-tips-1nce"}>CLI version. A collection of handy tips</LinkButton> blog post!
+							🧐 What to learn more? Check out the <LinkButton href={"https://dev.to/mszostok/cli-version-a-collection-of-handy-tips-1nce"}>CLI version. A collection of handy tips</LinkButton> blog post!
 						</div>
 						<aside className="aside aside-1"></aside>
 						<aside className="aside aside-2"></aside>
@@ -77,7 +83,8 @@ function VersionLandingPage() {
 					{
 						imageSrc: ChatIcon, title: "Multiple Output Formats", description: (
 							<>
-								Print the version in the <Code>YAML</Code>, <Code>JSON</Code>, <Code>short</Code>, and <Code>pretty</Code> formats. Automatically disable color output for non-tty output streams.
+								Print the version in the <Code>YAML</Code>, <Code>JSON</Code>, <Code>short</Code>,
+								and <Code>pretty</Code> formats. Automatically disable color output for non-tty output streams.
 							</>
 						),
 					},
@@ -93,7 +100,10 @@ function VersionLandingPage() {
 						title: "Modularity",
 						description: (
 							<>
-							Designed in a way that lets you use each component individually. For example, use the <LinkButton href={"get-started/upgrade-notice/"}>notice upgrade</LinkButton> component, or the <LinkButton href={"get-started/usage/plain/"}>version collector</LinkButton> logic, or a <LinkButton href={"get-started/usage/printer/"}>printer</LinkButton> with your own info object.
+								Designed in a way that lets you use each component individually. For example, use the <LinkButton
+								href={"get-started/upgrade-notice/"}>notice upgrade</LinkButton> component, or the <LinkButton
+								href={"get-started/usage/plain/"}>version collector</LinkButton> logic, or a <LinkButton
+								href={"get-started/usage/printer/"}>printer</LinkButton> with your own info object.
 							</>
 						)
 					},
@@ -110,68 +120,70 @@ function VersionLandingPage() {
 					{
 						imageSrc: CustomizeIcon, title: "...with Full Customization", description: (
 							<>
-								However you can customize the default behavior of the version components via <Code>printer.WithLayout</Code>, <Code>printer.WithPostRender</Code>, <Code>upgrade.WithUpdateCheckTimeout</Code>,
+								However you can customize the default behavior of the version components
+								via <Code>printer.WithLayout</Code>, <Code>printer.WithPostRender</Code>, <Code>upgrade.WithUpdateCheckTimeout</Code>,
 								and many <LinkButton href={"customization"}>others</LinkButton>.
 							</>
 						)
 					},
 
 				]}/>
-					<br /><br /><br /><br /><br /><br />
-					<FeatureWithImage
-						images={["https://szostok.io/projects/version/assets/examples/screen-cobra-version.png/", "https://szostok.io/projects/version/assets/examples/screen-custom-layout-.png/", "https://szostok.io/projects/version/assets/examples/screen-custom-formatting-.png/",]}
-						heading={(<>
-							<FeatureHighlight>Pretty</FeatureHighlight> output format
-						</>)}
-						description={"It comes with a built-in style. However, you can easily create your own. You can customize formatting and layout, or provide your own renderer functions."}
-						primaryButtonUrl={"customization/pretty/format/"}
-					/>
-					<FeatureWithImage
-						images={["https://szostok.io/projects/version/assets/examples/screen-printer--oyaml.png", "https://szostok.io/projects/version/assets/examples/screen-printer--ojson.png",]}
-						heading={(<>
-							<FeatureHighlight>JSON/YAML</FeatureHighlight> output format
-						</>)}
-						description={(<>
-							This format can be useful for scripting purposes, e.g.
-							<br/>
-							<br/>
-							<Code> cli version -ojson | jq .commit </Code>
-							<br/>
-							<br/>
-							<br/>
-							<br/>
-						</>)}
-					/>
+				<br/><br/><br/><br/><br/><br/>
+				<FeatureWithImage
+					images={["https://szostok.io/projects/version/assets/examples/screen-cobra-version.png/", "https://szostok.io/projects/version/assets/examples/screen-custom-layout-.png/", "https://szostok.io/projects/version/assets/examples/screen-custom-formatting-.png/",]}
+					heading={(<>
+						<FeatureHighlight>Pretty</FeatureHighlight> output format
+					</>)}
+					description={"It comes with a built-in style. However, you can easily create your own. You can customize formatting and layout, or provide your own renderer functions."}
+					primaryButtonUrl={"customization/pretty/format/"}
+				/>
+				<FeatureWithImage
+					images={["https://szostok.io/projects/version/assets/examples/screen-printer--oyaml.png", "https://szostok.io/projects/version/assets/examples/screen-printer--ojson.png",]}
+					heading={(<>
+						<FeatureHighlight>JSON/YAML</FeatureHighlight> output format
+					</>)}
+					description={(<>
+						This format can be useful for scripting purposes, e.g.
+						<br/>
+						<br/>
+						<Code> cli version -ojson | jq .commit </Code>
+						<br/>
+						<br/>
+						<br/>
+						<br/>
+					</>)}
+				/>
 
-					<FeatureWithImage
-						images={["https://szostok.io/projects/version/assets/examples/screen-printer--oshort.png",]}
-						heading={(<>
-							<FeatureHighlight>Short</FeatureHighlight> output format
-						</>)}
-						description={"Short format can be useful for CI purposes, e.g. to easily validate that the correct CLI version is used."}
-					/>
-					<FeatureWithImage
-						images={["https://szostok.io/projects/version/assets/examples/screen-cobra-version_-h.png/", "https://szostok.io/projects/version/assets/examples/screen-cobra-version.png/",]}
-						heading={(<>
-							<FeatureHighlight>Cobra</FeatureHighlight> native support
-						</>)}
-						description={(<>
-							There is built-in support for <LinkButton href={"https://github.com/spf13/cobra"}>https://github.com/spf13/cobra</LinkButton>.
-						</>)}
-						primaryButtonUrl={"quick-start/"}
-					/>
-					<FeatureWithImage
-						images={["https://szostok.io/projects/version/assets/examples/screen-upgrade-notice-cobra-version.png/", "https://szostok.io/projects/version/assets/examples/screen-upgrade-notice-cobra-version_-ojson.png/", "https://szostok.io/projects/version/assets/examples/screen-upgrade-notice-custom-version.png/",]}
-						heading={(<>
-							<FeatureHighlight>Release</FeatureHighlight> upgrade notice
-						</>)}
-						description={(<>
-							Checks for new GitHub releases. If a newer version was found, it displays an upgrade notice.
-							<br/>
-							You can customize all aspects of the upgrade check!
-						</>)}
-						primaryButtonUrl={"customization/upgrade-notice/"}
-					/>
+				<FeatureWithImage
+					images={["https://szostok.io/projects/version/assets/examples/screen-printer--oshort.png",]}
+					heading={(<>
+						<FeatureHighlight>Short</FeatureHighlight> output format
+					</>)}
+					description={"Short format can be useful for CI purposes, e.g. to easily validate that the correct CLI version is used."}
+				/>
+				<FeatureWithImage
+					images={["https://szostok.io/projects/version/assets/examples/screen-cobra-version_-h.png/", "https://szostok.io/projects/version/assets/examples/screen-cobra-version.png/",]}
+					heading={(<>
+						<FeatureHighlight>Cobra</FeatureHighlight> native support
+					</>)}
+					description={(<>
+						There is built-in support for <LinkButton
+						href={"https://github.com/spf13/cobra"}>https://github.com/spf13/cobra</LinkButton>.
+					</>)}
+					primaryButtonUrl={"quick-start/"}
+				/>
+				<FeatureWithImage
+					images={["https://szostok.io/projects/version/assets/examples/screen-upgrade-notice-cobra-version.png/", "https://szostok.io/projects/version/assets/examples/screen-upgrade-notice-cobra-version_-ojson.png/", "https://szostok.io/projects/version/assets/examples/screen-upgrade-notice-custom-version.png/",]}
+					heading={(<>
+						<FeatureHighlight>Release</FeatureHighlight> upgrade notice
+					</>)}
+					description={(<>
+						Checks for new GitHub releases. If a newer version was found, it displays an upgrade notice.
+						<br/>
+						You can customize all aspects of the upgrade check!
+					</>)}
+					primaryButtonUrl={"customization/upgrade-notice/"}
+				/>
 				<FeatureWithImage
 					images={["https://szostok.io/projects/version/assets/examples/screen-custom-fields-.png"]}
 					heading={(<>
