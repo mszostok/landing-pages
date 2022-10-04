@@ -62,7 +62,7 @@ function VersionLandingPage() {
 				<div className={"announcement-bar-container"} >
 					<div className="wrapper">
 						<div className="main">
-							🧐 What to learn more? Check out the <LinkButton href={"https://dev.to/mszostok/cli-version-a-collection-of-handy-tips-1nce"}>CLI version. A collection of handy tips</LinkButton> blog post!
+							🧐 Want to learn more? Check out the <LinkButton href={"https://dev.to/mszostok/cli-version-a-collection-of-handy-tips-1nce"}>CLI version. A collection of handy tips</LinkButton> blog post!
 						</div>
 						<aside className="aside aside-1"></aside>
 						<aside className="aside aside-2"></aside>
